@@ -1,5 +1,0 @@
-# testdouble-jasmine
-
-## Use
-
-## Setup
