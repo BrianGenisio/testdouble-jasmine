@@ -1,6 +1,6 @@
 {
   "name": "testdouble-jasmine",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Jasmine matcher for use with testdouble.js's verify() function",
   "main": "lib/testdouble-jasmine.js",
   "scripts": {
