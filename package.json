@@ -5,6 +5,8 @@
   "main": "lib/testdouble-jasmine.js",
   "scripts": {
     "prepublish": "npm test",
+    "preversion": "npm test",
+    "postversion": "git push && git push --tags && npm publish",
     "test": "npm run test1x && npm run test2x",
     "test1x": "jasmine-node spec",
     "test2x": "jasmine"
