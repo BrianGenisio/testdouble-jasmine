@@ -31,7 +31,7 @@ If you want to hook up the matchers for everyone, you can `use()` this to the to
 ```js
 // at the top of a spec helper
 var td = require('testdouble');
-var tdJasmine = require('../lib/testdouble-jasmine'); 
+var tdJasmine = require('testdouble-jasmine'); 
 tdJasmine.use(td); // make sure to call tdJasmine.use with td to register the matcher
 ```
 
