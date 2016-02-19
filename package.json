@@ -4,7 +4,8 @@
   "description": "Jasmine matcher for use with testdouble.js's verify() function",
   "main": "lib/testdouble-jasmine.js",
   "scripts": {
-    "test": "jasmine-node spec",
+    "test": "npm run test1x && npm run test2x",
+    "test1x": "jasmine-node spec",
     "test2x": "jasmine"
   },
   "repository": {

@@ -1,7 +1,7 @@
 var td = require('testdouble');
 var tdJasmine = require('../lib/testdouble-jasmine');
 
-tdJasmine(td);
+tdJasmine.use(td);
 
 describe("testdouble-jasmine", function() {
 
