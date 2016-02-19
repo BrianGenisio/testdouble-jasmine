@@ -35,5 +35,8 @@
   },
   "peerDependencies": {
     "testdouble": "^0.8.0"
+  },
+  "dependencies": {
+    "jasmine-matcher-wrapper": "0.0.3"
   }
 }

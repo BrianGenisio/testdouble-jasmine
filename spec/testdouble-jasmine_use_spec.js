@@ -5,7 +5,7 @@ tdJasmine.use(td);
 
 var runTests = require('./common');
 
-describe("testdouble-jasmine with explicit matchers", function() {
+describe("testdouble-jasmine with global matchers", function() {
 
   beforeEach(function() {
     this.subject = td.function("dubs");

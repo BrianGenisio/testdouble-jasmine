@@ -41,7 +41,7 @@ You may not want to add the testdouble matcher to every test.  In that case, you
 *Jasmine 1.x*
 ```js
 var td = require('testdouble');
-var tdMatchers = require('../lib/testdouble-jasmine').get(td);
+var tdMatchers = require('testdouble-jasmine').get(td);
 
 describe('something', function() {
     beforeEach(function() {
@@ -53,7 +53,7 @@ describe('something', function() {
 *Jasmine 2.x*
 ```js
 var td = require('testdouble');
-var tdMatchers = require('../lib/testdouble-jasmine').get(td);
+var tdMatchers = require('testdouble-jasmine').get(td);
 
 describe('something', function() {
     beforeEach(function() {
