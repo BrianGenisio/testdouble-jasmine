@@ -25,11 +25,41 @@ it("can tell you if a testdouble object was called a certain way", function() {
 ## Setup
 After installing the library with `npm install --save-dev testdouble-jasmine`, here's how to get jasmine to know about `testdouble-jasmine`:
 
-```
-// at the top of a test file or in a test helper
+### Global
+If you want to hook up the matchers for everyone, you can `use()` this to the top of your spec helper:
+
+```js
+// at the top of a spec helper
 var td = require('testdouble');
 var tdJasmine = require('../lib/testdouble-jasmine'); 
-tdJasmine(td); // make sure to call tdJasmine with td to register the matcher
+tdJasmine.use(td); // make sure to call tdJasmine.use with td to register the matcher
+```
+
+### More Control
+You may not want to add the testdouble matcher to every test.  In that case, you can `get()` the matchers and register them yourself:
+
+*Jasmine 1.x*
+```js
+var td = require('testdouble');
+var tdMatchers = require('../lib/testdouble-jasmine').get(td);
+
+describe('something', function() {
+    beforeEach(function() {
+        this.addMatchers(tdMatchers);
+    });
+});
+```
+
+*Jasmine 2.x*
+```js
+var td = require('testdouble');
+var tdMatchers = require('../lib/testdouble-jasmine').get(td);
+
+describe('something', function() {
+    beforeEach(function() {
+        jasmine.addMatchers(tdMatchers);
+    });
+});
 ```
 
 And you should be good to go! Check out `test/testdouble-jasmine_spec.js` for an exhaustive description of how this library behaves.
