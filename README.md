@@ -22,11 +22,35 @@ it("can tell you if a testdouble object was called a certain way", function() {
 });
 ```
 
+You can pass testdouble options into the verify function if you'd like:
+
+```js
+it("can verify the number of times a double is called", function() {
+  var td = testdouble.function();
+  td();
+  td();
+
+  expect().toVerify({called: td(), times: 2});
+});
+```
+
+Or, an alternate calling mechanism if you are using Jasmine 2.x:
+
+```js
+it("can verify the number of times a double is called", function() {
+  var td = testdouble.function();
+  td();
+  td();
+
+  expect().toVerify(td(), {times: 2});
+});
+```
+
 ## Setup
 After installing the library with `npm install --save-dev testdouble-jasmine`, here's how to get jasmine to know about `testdouble-jasmine`:
 
 ### Global
-If you want to hook up the matchers for everyone, you can `use()` this to the top of your spec helper:
+If you want to hook up the matchers for everyone, you can `use()` this to the top of your spec helper.  It will determine whether you are using jasmine 1.x or 2.x and act accordingly:
 
 ```js
 // at the top of a spec helper

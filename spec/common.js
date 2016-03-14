@@ -22,5 +22,14 @@ module.exports = function() {
       // Passing Arguments only works with Jasmine 2.0
       expect().toVerify(this.subject(), {times: 2});
     });
+
+    it('can pass options as primary parameter', function() {
+      this.subject();
+      this.subject();
+
+      // Passing Arguments only works with Jasmine 2.0
+      expect().toVerify({called: this.subject(), times: 2});
+      expect().not.toVerify({called: this.subject(), times: 3});
+    });
   });
 }
