@@ -14,5 +14,13 @@ module.exports = function() {
       not_a_testdouble();
       expect().not.toVerify(not_a_testdouble());
     });
+
+    it('uses options with the verify function', function() {
+      this.subject();
+      this.subject();
+
+      // Passing Arguments only works with Jasmine 2.0
+      expect().toVerify(this.subject(), {times: 2});
+    });
   });
 }
