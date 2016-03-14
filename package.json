@@ -1,6 +1,6 @@
 {
   "name": "testdouble-jasmine",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Jasmine matcher for use with testdouble.js's verify() function",
   "main": "lib/testdouble-jasmine.js",
   "scripts": {
@@ -39,6 +39,5 @@
   "peerDependencies": {
     "testdouble": "^0.8.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
